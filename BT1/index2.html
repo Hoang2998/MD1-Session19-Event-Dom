@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        span{
+            display: block;
+            padding: 10px;
+            margin: 10px;
+        }
+       
+        
+    </style>
+    <div id ="newDiv">
+        <h1>Modal Example</h1>
+        <button id="btn">Open Modal</button>
+        <p id="box"><span>some text in the Modal...</span><span>X</span></p>
+    </div>
+    <script>
+        let newDiv = document.getElementById("newDiv");
+        let btn = document.getElementById("btn");
+        let box = document.getElementById("box");
+        box.style.display="none"
+        // box.style.flexDirection=""
+        btn.addEventListener("click",()=>{
+            newDiv.style.backgroundColor="silver";
+            newDiv.style.height="200px"
+            btn.style.backgroundColor="silver"
+            box.style.display="flex"
+            box.style.justifyContent="space-between"
+            box.style.backgroundColor="white"
+            box.style.width="80vw"
+            box.style.marginLeft="60px"
+        })
+        let span = document.getElementsByTagName("span")
+        span[1].addEventListener("click",()=>{
+            box.style.display="none"
+            btn.style.backgroundColor="white"
+            newDiv.style.backgroundColor="white";
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        các cách gắn sự kiện vào html
+            c1: gắn trực tiếp
+            c2:gắn sự kiện bằng cách thay đổi thuột tính phần tử (sẽ bị ghi đè nếu có nhiều thuộc tính event)
+            c3:gắn sự kiện sử dụng phương thức 
+            addEventListener(có thể add nhiêuf event khác nhau)
+     
+        các sự kiện với chuột:
+            +mouseDown sự kiện xảy ra khi nhấp chuột xuống 
+            cấu trúc myDiv.addEventlistener("mouseDown",function);
+
+            +mouseUp sự kiện xảy ra khi nhấc chuột lên
+            cấu trúc myDiv.addEventListener("mouseUp",()=>{})
+
+            +sự kiện xảy ra khi chuột nằm trên phần tử
+            cấu trúc myDiv.addEventListener("mouseover",()=>{});
+
+            +sự kiện xảy ra khi nằm ngoài phần tử
+            cấu trúc myDiv.addEventListener("mouseout",()=>{});
+
+            +sự kiện xảy ra khi chuột di chuyển trên phần tử 
+        
+        các sự kiện với keyboard:
+          keydown, keyup , keypress
+          
+        sự kiện khi giá trị thay đổi:
+        myInput.addEventListener("change",(e)=>{
+            cốnle.log(e.target.value)
+        })
+
+        sự kiện khi nhập giá trị cho phần tử
+        myInput.addEventListener("input",(e)=>{
+            cốnle.log(e.target.value)
+
+        sự kiện khi cuộn thanh lên
+        document.addEventListener("scroll",(e)=>{
+            cốnle.log(window.pageXOffset)})
+
+        sự kiện khi thay đổi kích thước cửa sổ
+        -->  
+
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>Your belonggings</h1>
+        <input type="text" id="text">
+        <button id="btn" value="">Add</button>
+    </div>
+    <ul>
+        <li>Test item 1</li>
+        <li>Test item 2</li>
+    </ul>
+    <script>
+        let items = ["Backpack", "MiBand watch", "Ring"]
+        let ul = document.getElementsByTagName("ul")
+        console.log(ul[0])
+        for (let i = 0; i < items.length; i++) {
+            let ele = document.createElement("li")
+            ele.innerText = items[i]
+            ul[0].appendChild(ele)
+        }
+        let li = document.getElementsByTagName("li")
+        li[0].remove();
+        li[0].remove();
+        let btn = document.getElementById("btn")
+        let text = document.getElementById("text")
+        text.setAttribute("placeholder","New item")
+        function read (){
+            for (let i = 0; i < items.length; i++) {
+            let ele = document.createElement("li")
+            ele.innerText = items[i]
+            ul[0].appendChild(ele)
+        }
+        }
+        function createDelete (){
+          for(let i=0;i<li.length;i++){
+            let button = document.createElement("button")
+            button.innerHTML = "delete"
+            button.style.fontSize = "8px"
+            li[i].appendChild(button)
+            button.addEventListener("click",(e)=>{
+                li[i].remove()
+                items.splice(i,1);
+                console.log(items)
+                console.log(e)
+            })
+        }
+        }
+        createDelete()
+        btn.addEventListener("click",()=>{
+            items.unshift(text.value)
+            for(let i=0;i<items.length-1;i++){
+                li[0].remove()
+            }
+            console.log(items)
+            read()
+            createDelete()
+            text.value=""
+        })
+       console.log(li);
+       console.log(items)
+    </script>
+</body>
+
+</html>

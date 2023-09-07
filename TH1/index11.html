@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="text" placeholder="Enter your name">
+        <button id="btn">Upper it!!!</button>
+        <p>your result will appear here</p>
+        <script>
+            let button = document.getElementById("btn");
+            let text = document.getElementById("text");
+            let p = document.getElementsByTagName("p")
+            button.addEventListener("click", (e) => {
+                // e.preventDefault()(dung cho the form de tranh reload)
+                console.log(typeof(text.value))
+                let upper = text.value.toUpperCase()
+                p[0].innerHTML = upper
+            })
+
+        </script>
+    </div>
+</body>
+
+</html>

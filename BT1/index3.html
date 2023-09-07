@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id ="newDiv">
+        <h1>change background color</h1>
+        <p>Mouse over the squares</p>
+        <div id="s0">
+            <div id="s1"></div>
+            <div id="s2"></div>
+            <div id="s3"></div>
+        </div>
+    </div>
+    <script>
+        let newDiv = document.getElementById("newDiv");
+        let s0 = document.getElementById("s0")
+        let s1 = document.getElementById("s1")
+        let s2 = document.getElementById("s2")
+        let s3 = document.getElementById("s3")
+        s0.style.display="flex"
+        s1.style.width="100px"
+        s1.style.height="100px"
+        s1.style.backgroundColor="red"
+        s2.style.width="100px"
+        s2.style.height="100px"
+        s2.style.backgroundColor="blue"
+        s3.style.width="100px"
+        s3.style.height="100px"
+        s3.style.backgroundColor="green"
+        s1.style.margin="5px"
+        s2.style.margin="5px"
+        s3.style.margin="5px"
+        newDiv.style.backgroundColor="pink"
+        newDiv.style.width="360px"
+        s1.addEventListener("mouseover",()=>{
+        newDiv.style.backgroundColor="red"
+        })
+        s1.addEventListener("mouseout",()=>{
+        newDiv.style.backgroundColor="pink"
+        })
+        s2.addEventListener("mouseover",()=>{
+        newDiv.style.backgroundColor="blue"
+        })
+        s2.addEventListener("mouseout",()=>{
+        newDiv.style.backgroundColor="pink"
+        })
+        s3.addEventListener("mouseover",()=>{
+        newDiv.style.backgroundColor="green"
+        })
+        s3.addEventListener("mouseout",()=>{
+        newDiv.style.backgroundColor="pink"
+        })
+    </script>
+</body>
+</html>

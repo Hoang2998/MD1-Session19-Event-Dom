@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="name">
+    <input type="text" id="wish">
+    <input type="button" id="btn">
+    <script>
+        let name1 = document.getElementById("name");
+        //     name.addEventListener("change",(e)=>{
+        //     console.log(e)
+        //     alert(e.target.value)
+        // })
+        let wish = document.getElementById("wish");
+        //     wish.addEventListener("change",(e)=>{
+        //     console.log(e)
+        //     alert(e.target.value)
+        // })
+        let btn = document.getElementById("btn")
+        btn.value="button"
+        function abc(name, wish) {
+            alert(name);
+            alert(wish);
+        }
+        btn.addEventListener("click", () => {
+            let nameVal = name1.value;
+            let wishVal = wish.value;
+            abc(nameVal, wishVal);
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="btn1">abc</div>
+    <div id="btn2">bc</div>
+    <input type="text" id="input">
+    <script>
+        let btn1 = document.getElementById("btn1")
+        let btn2 = document.getElementById("btn2")
+        btn1.addEventListener("click", (e) => {
+            console.log(e.target)
+    });
+    btn2.addEventListener("click", (e) => {
+            console.log(e.target)
+    });
+    let input = document.getElementById("input");
+    input.addEventListener("keydown",(e)=>{
+        console.log(e)
+    })
+    </script>
+</body>
+</html>

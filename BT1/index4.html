@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            
+        }
+    </style>
+    <div id="div">
+        <h1>Tooltip</h1>
+        <p>Move the text below</p>
+        <p id="toolTip">Tooltip text</p>
+        <p id="text">Hover over me</p>
+    </div>
+    <script>
+        let div = document.getElementById("div");
+        div.style.display="flex"
+        div.style.flexDirection="column"
+        div.style.alignItems="center"
+        div.style.position="relative"
+        div.style.padding="5px"
+        let toolTip = document.getElementById("toolTip");
+        toolTip.style.backgroundColor="silver"
+        toolTip.style.padding="5px"
+        toolTip.style.borderRadius="5px"
+        toolTip.style.position="absolute"
+        toolTip.style.bottom="20px"
+      
+        let text = document.getElementById("text");
+        text.addEventListener("mouseover",()=>{
+            toolTip.style.display="block"
+        })
+        text.addEventListener("mouseout",()=>{
+            toolTip.style.display="none"
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="newDiv"></div>
+    <script>
+        let newDiv = document.getElementById("newDiv")
+        let form = document.createElement("form");
+        newDiv.appendChild(form);
+        let userName = document.createElement("input");
+        form.appendChild(userName);
+        let passWord = document.createElement("input");
+        form.appendChild(passWord);
+        userName.setAttribute("type","text");
+        userName.placeholder = "userName";
+        userName.value = ""
+        userName.style.color = "pink";
+        userName.style.width = "150px";
+        userName.style.textAlign = "center";
+        form.style.display = "flex";
+        form.style.flexDirection = "column"
+        passWord.value = "aaa";
+        passWord.style.backgroundColor = "orange"
+        passWord.setAttribute("type","password");
+    </script>
+</body>
+</html>
